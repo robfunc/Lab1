@@ -30,7 +30,7 @@ def col_inputs():
     print("\n")
 
 def calculate():
-    global ave; global remarks
+    global ave; global remarks; global EqGrade
     #calculating the inputted values
     ave = float(prelims+midterm+semifinals+finals)
     ave = float(ave/4)
@@ -42,7 +42,19 @@ def calculate():
     else:
         remarks = "Failed"
 
-
+    # To get Equivalent Grade
+    if(ave >= 99 and ave <= 100):
+        EqGrade = "A"
+    elif(ave >= 90 and ave < 99):
+        EqGrade = "B"
+    elif(ave >= 80 and ave < 90):
+        EqGrade = "C"
+    elif(ave >= 71 and ave < 80):
+        EqGrade = "D"
+    elif(ave >= 61 and ave < 71):
+        EqGrade = "E"
+    else:
+        EqGrade = "F"
 
     '''۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝۝'''
 
